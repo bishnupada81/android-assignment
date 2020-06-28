@@ -1,0 +1,5 @@
+10. A reference variable can be declared as a class type or an interface type.If the variable is declared as an interface type, it can reference any object of any class that implements the interface.So here converter is a object reference variable of interface type. And convert method is declared in the interface and also define this method in Thermometer or PitotTube class so it is possible to call the convert method on an instance of Thermometer or PitotTube.
+
+11.we call the isHot or isFast method on the converter object this fails because isHot and isFast method are not declared in the interface. converter is a object variable of interface type so it has no knowledge of these methods that's why it fails.
+
+12.When we typecast the converter instance to its subclass of Thermometer, Thermocouple , PitotTube or ShaftLog then the converter object knows about all the methods that are declared in that class.Thats is why, after typecasting converter doesn’t fail while calling the isHot or isFast method.
